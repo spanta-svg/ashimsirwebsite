@@ -17,7 +17,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="loader" id="loader"><div class="loader-mark">A<span>.</span></div><div class="loader-line"><i></i></div></div>
+  <div class="loader" id="loader" aria-label="Loading portfolio"><div class="loader-mark">A<span>.</span></div><div class="loader-line"><i></i></div></div>
+<script>
+  // Critical deployment failsafe: the splash screen must never block the site.
+  (function () {
+    var loader = document.getElementById('loader');
+    if (!loader) return;
+    var hide = function () {
+      loader.classList.add('done');
+      loader.setAttribute('aria-hidden', 'true');
+    };
+    window.setTimeout(hide, 2100);
+    window.addEventListener('load', function () {
+      window.setTimeout(hide, 250);
+    }, { once: true });
+  })();
+</script>
+
   <div class="progress" id="progress"></div>
   <div class="noise"></div>
   <div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>

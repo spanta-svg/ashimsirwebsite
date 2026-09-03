@@ -1,33 +1,21 @@
-# Ashim Sharma Mainali — Ultimate Portfolio
-
-A premium animated static portfolio built with HTML, CSS and vanilla JavaScript, powered by Vite for local development.
+# Ashim Sharma Mainali — Fixed Portfolio
 
 ## Run locally
-
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite (usually http://localhost:5173).
-
-## Build
-
+## Build for production
 ```bash
 npm run build
 npm run preview
 ```
 
-## Included
-- Premium responsive layout
-- Animated page loader and scroll progress
-- Dark/light theme with localStorage
-- Scroll reveal animations
-- Animated statistics
-- Interactive 3D tilt cards
-- Magnetic buttons and custom cursor on desktop
-- Venture portfolio cards
-- Vision/focus section
-- Responsive image gallery + lightbox
-- Mobile navigation
-- Reduced-motion accessibility support
+## Vercel
+Import this project into Vercel and use:
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install`
+
+The loading screen includes a deployment-safe fallback so the page cannot remain permanently stuck on the `A.` splash screen if the external JavaScript fails or loads slowly.
